@@ -1,0 +1,5 @@
+QUESTIONS:
+
+Do we need to add a urls.py to our albums folder? PT 2
+
+In albums/models we might need a get_absolute_url def PT 3
