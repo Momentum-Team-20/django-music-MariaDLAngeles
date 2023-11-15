@@ -1,16 +1,18 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
     <title>Document</title>
 </head>
 <body>
     {% block sidebar %}
     <ul class="sidebar-nav">
         <li><a href="{% url 'albums-home' %}">Albums Home</a></li>
-        <li><a href="{% url 'album-list' %}">Albums List</a></li>
         <li><a href="">Artists List</a></li>
+        <li><a href="{% url 'new_album' %}">Create a New Album</a></li>
     </ul>
     {% endblock %}
     {% block content %}

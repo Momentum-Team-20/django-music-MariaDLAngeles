@@ -1,0 +1,9 @@
+{% extends 'albums_base.html' %}
+
+{% block content %}
+<form action="/new-album/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

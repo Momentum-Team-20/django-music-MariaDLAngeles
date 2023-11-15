@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'albums_base.html' %}
 
 {% block content %}
 <h1>This is my homepage? This is index inside albums/templates/albums</h1>
@@ -6,5 +6,10 @@
 <p>
     Welcome to myAlbums, a place that holds any musical albums that I could remember.
 </p>
-
+<h3> Our Current Albums are:</h3>
+<ul>
+{% for album in albums %}
+<li><a href="{% url 'album_detail' album.pk %}">{{ album }}</a></li>
+{% endfor %}
+</ul>
 {% endblock %}
